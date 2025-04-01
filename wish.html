@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+
+    <div class="container" id="welcomePage">
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+
+        <div class="message-box">
+            <h1>Happy Birthday, My Bestie! 🎉🎂</h1>
+            <button class="btn" onclick="showGallery()">Let's Go! ✨</button>
+        </div>
+    </div>
+
+    <div class="gallery-container" id="galleryPage">
+        <button class="btn" onclick="goBack()">← Back to Welcome</button>
+
+        <div class="image-gallery">
+            <img src="me1.jpg" class="gallery-img">
+            <img src="me2.jpg" class="gallery-img">
+            <img src="me3.jpg" class="gallery-img">
+            <img src="me1.jpg" class="gallery-img">
+            <img src="me2.jpg" class="gallery-img">
+            <img src="me3.jpg" class="gallery-img">
+            <img src="me1.jpg" class="gallery-img">
+        </div>
+
+        <button class="btn" onclick="showVideo()">✨ Next Surprise! ✨</button>
+    </div>
+
+    <div class="video-container" id="videoSection">
+        <h2>🎥 Special Birthday Video 🎥</h2>
+        <div class="video-box">
+            <video controls>
+                <source src="HAPPY.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <button class="btn" onclick="goBackToGallery()">← Back to Gallery</button>
+    </div>
+
+    <script>
+        function showGallery() {
+            document.getElementById("welcomePage").style.display = "none";
+            document.getElementById("galleryPage").style.display = "flex";
+        }
+
+        function goBack() {
+            document.getElementById("galleryPage").style.display = "none";
+            document.getElementById("welcomePage").style.display = "flex";
+        }
+
+        function showVideo() {
+            document.getElementById("galleryPage").style.display = "none";
+            document.getElementById("videoSection").style.display = "flex";
+        }
+
+        function goBackToGallery() {
+            document.getElementById("videoSection").style.display = "none";
+            document.getElementById("galleryPage").style.display = "flex";
+        }
+    </script>
+</body>
+</html>

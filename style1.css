@@ -1,0 +1,113 @@
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            overflow: hidden;
+        }
+
+        .balloon {
+            position: absolute;
+            width: 50px;
+            height: 70px;
+            background: radial-gradient(circle, #ff4b2b, #ff416c);
+            border-radius: 50%;
+            animation: floatBalloon 5s infinite alternate ease-in-out;
+        }
+
+        @keyframes floatBalloon {
+            0% { transform: translateY(100vh); opacity: 1; }
+            100% { transform: translateY(-20vh); opacity: 0.8; }
+        }
+
+        .balloon:nth-child(1) { left: 10%; animation-duration: 4s; }
+        .balloon:nth-child(2) { left: 25%; animation-duration: 5s; }
+        .balloon:nth-child(3) { left: 40%; animation-duration: 6s; }
+        .balloon:nth-child(4) { left: 55%; animation-duration: 4.5s; }
+        .balloon:nth-child(5) { left: 70%; animation-duration: 5s; }
+        .balloon:nth-child(6) { left: 85%; animation-duration: 6.5s; }
+        .balloon:nth-child(7) { left: 15%; animation-duration: 4s; }
+        .balloon:nth-child(8) { left: 29%; animation-duration: 5s; }
+        .balloon:nth-child(9) { left: 49%; animation-duration: 6s; }
+        .balloon:nth-child(10) { left: 56%; animation-duration: 4.5s; }
+        .balloon:nth-child(11) { left: 70%; animation-duration: 5s; }
+        .balloon:nth-child(12) { left: 89%; animation-duration: 6.5s; }
+        .balloon:nth-child(13) { left: 17%; animation-duration: 4s; }
+        .balloon:nth-child(14) { left: 32%; animation-duration: 5s; }
+        .balloon:nth-child(15) { left: 56%; animation-duration: 6s; }
+        .balloon:nth-child(16) { left: 65%; animation-duration: 4.5s; }
+        .balloon:nth-child(17) { left: 77%; animation-duration: 5s; }
+        .balloon:nth-child(18) { left: 97%; animation-duration: 6.5s; }
+
+        .container, .gallery-container, .video-container {
+            height: 100vh;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .container {
+            display: flex;
+        }
+
+        .message-box {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+            z-index: 2;
+        }
+
+        h1 {
+            color: #e91e63;
+            font-size: 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 25px;
+            background: linear-gradient(90deg, #ff4b2b, #ff416c);
+            color: white;
+            font-size: 1.2rem;
+            border-radius: 30px;
+            text-decoration: none;
+            cursor: pointer;
+            border: none;
+            margin: 10px;
+        }
+
+        .btn:hover {
+            transform: scale(1.1);
+        }
+
+        .image-gallery {
+            position: relative;
+            width: 100%;
+            height: 400px;
+        }
+
+        .gallery-img {
+            width: 150px;
+            height: 200px;
+            border-radius: 15px;
+            border: 5px solid #ff416c;
+            position: absolute;
+            animation: circularMotion 6s linear infinite;
+        }
+
+        @keyframes circularMotion {
+            0% { transform: rotate(0deg) translateX(150px) rotate(0deg); }
+            100% { transform: rotate(360deg) translateX(150px) rotate(-360deg); }
+        }
+
+        .gallery-img:nth-child(1) { top: 10%; left: 20%; animation-duration: 6s; }
+        .gallery-img:nth-child(2) { top: 20%; left: 40%; animation-duration: 7s; }
+        .gallery-img:nth-child(3) { top: 30%; left: 60%; animation-duration: 6.5s; }
+        .gallery-img:nth-child(4) { top: 40%; left: 80%; animation-duration: 5.5s; }
+        .gallery-img:nth-child(5) { top: 50%; left: 30%; animation-duration: 7.5s; }
+        .gallery-img:nth-child(6) { top: 60%; left: 50%; animation-duration: 6.5s; }
+        .gallery-img:nth-child(7) { top: 70%; left: 70%; animation-duration: 5s; }
+
